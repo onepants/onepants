@@ -1,0 +1,38 @@
+3、git 
+
+svn 使用 ： 检出---修改内容--提交--更新
+
+svn -- 服务器创建一个svn项目仓库--客户端检出项目仓库  ---  客户端添加文件 ---  提交  ---- 更新update
+svn ： 集中式版本管理工具 ， 一个服务器对应多个客户端      svn工作时不能断网     
+
+git ：  分布式版本管理工具  ， 一台电脑 既可以是客户端  也可以是服务器端   ， 工作过程中  可以断开网络
+
+git使用：
+1、创建一个项目目录
+2、检出git的项目仓库    命令  ----   git init 
+git status  查看当前被git管理的文件
+3、本地项目文件夹新增的文件 首先要进行 添加 操作，添加到 本地的项目仓库下 ，  命令  ---   git  add  文件全称
+
+   将全部文件添加到git项目中 ：  git  add .    或   git  add --all
+   如果添加的过程中想忽略某个或某些文件不被git管理 ， 需要在项目中创建一个   .gitignore 文件 ，把忽略的 文件全称 写入到 该文件中即可。 
+     touch   .gitignore  创建一个  .gitignore文件
+ 
+4、添加好后的文件，需要提交到git的服务器上 
+  git  commit  -m"日志"   日志必填
+
+5、添加好的文件 如果被修改  ，先  做add操作  ，再 commit  操作
+6、git log   查看日志信息
+
+
+
+github   git的服务提供商  通过GitHub可以上传项目  项目可以通过github来管理
+
+git  clone   git@github.com:lichune/1708Demo.git   克隆github上的项目到本地文件夹
+
+本地操作项目修改后，将修改的新项目重新推送到远端github ： git push -v origin master
+
+
+如果在github的线上做项目的修改，线下同步：  1--重新克隆      2 ---   在当前的项目目录下，使用命令：  git  pull origin master
+
+获取新建项目秘钥：
+ssh-keygen -t rsa -C "24633821@qq.com"  
